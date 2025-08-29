@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "next-themes";
 
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/footer/Footer";
@@ -24,23 +24,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-        <ThemeProvider attribute="class">
-    <html lang="en">
-      <body className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
+    <ThemeProvider attribute="class">
+      <html lang="en">
+        <body
+          className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
                       bg-gray-100
-                      min-h-screen 
-                      flex flex-col
-                      `}>
-
+                      `}
+        >
           {/* Navbar */}
           <Navbar />
           {/* Main content */}
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-      </body>
-    </html>
+          <main>{children}</main>
+          <div>
+            <Footer />
+          </div>
+        </body>
+      </html>
     </ThemeProvider>
   );
 }
