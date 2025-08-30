@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ProgressBar } from "@/components/skill/ProgressBar";
+import { ProgressBar } from "@/components/common/skill/ProgressBar";
 import { experienceList } from "@/constants/experience.constant";
 
 import { motion } from "framer-motion";

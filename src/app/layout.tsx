@@ -4,7 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "next-themes";
 
-import { Navbar } from "@/components/navbar/Navbar";
+import { Navbar } from "@/components/bar/Navbar";
 import { Footer } from "@/components/footer/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -24,22 +24,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute="class">
-      <html lang="en">
-        <body
-          className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
-                      bg-gray-100
+    <html lang="en">
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div
+            className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
                       `}
-        >
-          {/* Navbar */}
-          <Navbar />
-          {/* Main content */}
-          <main>{children}</main>
-          <div>
-            <Footer />
+          >
+            {/* Navbar */}
+            <Navbar />
+            {/* Main content */}
+            <main>{children}</main>
+            <div>
+              <Footer />
+            </div>
           </div>
-        </body>
-      </html>
-    </ThemeProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

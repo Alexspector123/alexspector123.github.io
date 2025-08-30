@@ -68,7 +68,7 @@ export const experienceList: exp[] = [
   },
   {
     name: "Postman",
-    progress: 40,
+    progress: 60,
     type: "tool",
   },
   {
@@ -78,7 +78,7 @@ export const experienceList: exp[] = [
   },
   {
     name: "Figma",
-    progress: 60,
+    progress: 50,
     type: "tool",
   },
   {

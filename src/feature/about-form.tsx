@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { ContactCard } from "./ContactCard";
+import { ContactCard } from "../components/common/contactCard/ContactCard";
 
 import { motion } from "framer-motion";
 
@@ -90,7 +90,7 @@ export function AboutForm() {
                   className="text-xl font-medium dark:text-white
                               mb-2"
                 >
-                  Hello, I&apos;m Hitori
+                  Hello, I&apos;m Phan Tran Thanh Huy
                 </h3>
                 <p className="text-base text-gray-700 dark:text-gray-300">
                   I am currently a fourth-year Computer Science student

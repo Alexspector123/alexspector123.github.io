@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ProjectCard } from "@/components/project/ProjectCard";
+import { ProjectCard } from "@/components/common/project/ProjectCard";
 
 import { motion } from "framer-motion";
 import { projectList } from "@/constants/project.constant";
