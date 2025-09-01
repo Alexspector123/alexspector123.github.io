@@ -3,23 +3,37 @@
 
 import PageTransition from "@/components/page/PageTransition";
 import { Information } from "@/components/common/home/Information";
-import { ContactCard } from "@/components/common/contactCard/ContactCard";
-import { Experience } from "@/components/common/home/Experience";
+import ContactSide from "@/components/common/contactCard/ContactSide";
+import { Tech } from "@/components/common/home/Tech";
+import { Timeline } from "@/components/common/home/Timeline";
+import { Project } from "@/components/common/home/Project";
+import ScrollReveal from "@/components/common/ScrollReveal";
 
 export default function Home() {
   return (
     <PageTransition>
-      <div className={`px-10 sm:px-20 dark:bg-black`}>
-        <Information />
+      <div className="px-10 sm:px-20 dark:bg-black">
+        <ScrollReveal>
+          <Information />
+        </ScrollReveal>
 
-        <Experience />
+        <ScrollReveal>
+          <Tech />
+        </ScrollReveal>
 
-        <div
-          className="flex flex-col md:flex-row justify-center gap-10 md:justify-around md:align-middle md:items-center 
-                    max-h-screen"
-        >
-          <ContactCard />
-        </div>
+        <ScrollReveal>
+          <Timeline />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Project />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row justify-center gap-10 md:justify-around md:align-middle md:items-center h-screen">
+            <ContactSide />
+          </div>
+        </ScrollReveal>
       </div>
     </PageTransition>
   );

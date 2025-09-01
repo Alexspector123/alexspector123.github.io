@@ -29,26 +29,26 @@ const navItems: NavItem[] = [
   {
     name: "HomePage",
     route: "/",
-    icon: <HiOutlineHome className="w-8 h-8" />,
-    activeIcon: <HiHome className="w-8 h-8" />,
+    icon: <HiOutlineHome className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiHome className="w-6 h-6 md:w-8 md:h-8" />,
   },
   {
     name: "Projects",
     route: "/projects",
-    icon: <HiOutlineFolderOpen className="w-8 h-8" />,
-    activeIcon: <HiFolderOpen className="w-8 h-8" />,
+    icon: <HiOutlineFolderOpen className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiFolderOpen className="w-6 h-6 md:w-8 md:h-8" />,
   },
   {
     name: "Experience",
     route: "/experience",
-    icon: <HiOutlineBriefcase className="w-8 h-8" />,
-    activeIcon: <HiBriefcase className="w-8 h-8" />,
+    icon: <HiOutlineBriefcase className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiBriefcase className="w-6 h-6 md:w-8 md:h-8" />,
   },
   {
     name: "Personal",
     route: "/about",
-    icon: <HiOutlineUser className="w-8 h-8" />,
-    activeIcon: <HiUser className="w-8 h-8" />,
+    icon: <HiOutlineUser className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiUser className="w-6 h-6 md:w-8 md:h-8" />,
   },
 ];
 
@@ -115,7 +115,7 @@ export const Sidebar = () => {
         }}
         animate={
           isMobile
-            ? { height: expanded ? 200 : 40 }
+            ? { height: expanded ? 230 : 40 }
             : { width: expanded ? 300 : 40 }
         }
         transition={{ duration: 0.3 }}
