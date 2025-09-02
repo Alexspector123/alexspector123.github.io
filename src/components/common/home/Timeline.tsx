@@ -22,19 +22,17 @@ export function Timeline() {
         <div className="flex flex-col gap-10">
           {events.map((event, idx) => (
             <div key={idx} className="flex items-start gap-10">
-              <div className="w-40 text-right font-semibold text-gray-600">
-                {event.date}
-              </div>
+              <div className="w-40 text-right font-semibold">{event.date}</div>
               <div className="relative">
                 <div
-                  className={`w-6 h-6 rounded-full bg-black flex items-center justify-center text-white`}
+                  className={`w-6 h-6 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black`}
                 >
                   {event.icon}
                 </div>
               </div>
 
               <div className="flex-1 bg-white rounded-xl shadow p-5">
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg font-bold dark:text-black">
                   {event.title} - {event.major}
                 </h3>
                 <h4 className="text-gray-600">{event.subtitle}</h4>

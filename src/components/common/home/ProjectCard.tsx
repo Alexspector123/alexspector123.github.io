@@ -16,7 +16,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div
       className="w-72 
-              bg-gray-300 
+              bg-gray-300 dark:bg-black
                 flex flex-col items-start justify-center 
                 rounded-md border-2 border-gray-800 
                 transition-all duration-300 
