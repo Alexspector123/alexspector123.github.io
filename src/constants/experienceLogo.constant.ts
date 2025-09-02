@@ -25,7 +25,7 @@ import {
   SiGraphql,
   SiApollographql,
 } from "react-icons/si";
-import { FaJava, FaDatabase } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import { PiFileSql } from "react-icons/pi";
 
 export const experienceLogoList: expLogo[] = [
