@@ -7,7 +7,7 @@ export default function LightBackground({
     <div className="min-h-screen w-full bg-[#fefcff] relative">
       {/* Dreamy Sky Pink Glow */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: `
         radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),

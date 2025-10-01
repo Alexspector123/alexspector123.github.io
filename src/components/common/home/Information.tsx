@@ -42,7 +42,7 @@ export function Information() {
           }}
         >
           <h1
-            className="text-4xl font-mono dark:text-white 
+            className="text-4xl font-mono
                         border-b border-gray-300 
                         pb-1 
                         inline-block 
@@ -51,7 +51,7 @@ export function Information() {
             Huy Phan
           </h1>
           <p
-            className="text-gray-500 text-lg font-mono dark:text-white
+            className="text-gray-500 text-2xl font-mono
                         whitespace-pre-line leading-relaxed"
           >
             An innovative{"\n"}software developer
@@ -61,7 +61,7 @@ export function Information() {
           href="/projects"
           className="mt-6 inline-block transition
                      text-sm font-mono text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
-                     hover:transform hover:translate-x-2
+                     transform hover:translate-x-2
                      duration-300"
         >
           Go through →

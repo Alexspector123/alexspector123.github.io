@@ -11,7 +11,6 @@ export function ExperienceForm() {
   return (
     <div
       className="p-10 pb-15 sm:p-20 md:pb-0
-                    bg-white dark:bg-black
                     font-mono
                     "
     >

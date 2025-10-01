@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider, useTheme } from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 import { Navbar } from "@/components/bar/Navbar";
 import { Footer } from "@/components/footer/Footer";
-import DarkBackground from "@/components/common/background/DarkBackground";
-import LightBackground from "@/components/common/background/LightBackground";
 import Background from "@/components/common/background/Background";
 
 const jetbrainsMono = JetBrains_Mono({

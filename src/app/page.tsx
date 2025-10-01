@@ -12,7 +12,7 @@ import ScrollReveal from "@/components/common/ScrollReveal";
 export default function Home() {
   return (
     <PageTransition>
-      <div className="px-10 sm:px-20 dark:bg-black">
+      <div className="px-10 sm:px-20">
         <ScrollReveal>
           <Information />
         </ScrollReveal>

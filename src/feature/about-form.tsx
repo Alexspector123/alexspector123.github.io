@@ -12,7 +12,6 @@ export function AboutForm() {
   return (
     <div
       className="p-10 pb-20 md:p-20 md:pb-0
-                    bg-white dark:bg-black
                     font-mono"
     >
       <div
