@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
 
 import { Navbar } from "@/components/bar/Navbar";
 import { Footer } from "@/components/footer/Footer";
+import DarkBackground from "@/components/common/background/DarkBackground";
+import LightBackground from "@/components/common/background/LightBackground";
+import Background from "@/components/common/background/Background";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -24,21 +27,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div
-            className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
+          <Background>
+            <div
+              className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
                       `}
-          >
-            {/* Navbar */}
-            <Navbar />
-            {/* Main content */}
-            <main>{children}</main>
-            <div>
-              <Footer />
+            >
+              {/* Navbar */}
+              <Navbar />
+              {/* Main content */}
+              <main>{children}</main>
+              <div>
+                <Footer />
+              </div>
             </div>
-          </div>
+          </Background>
         </ThemeProvider>
       </body>
     </html>
