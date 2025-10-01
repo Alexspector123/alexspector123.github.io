@@ -1,21 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
-
-interface Project {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-}
-
-const projectList: Project[] = [
-  {
-    title: "Mangadex Clone",
-    description:
-      "My personal project to clone Mangadex, a popular manga reading platform.",
-    imageUrl: "/mangadex.webp",
-    link: "Alexspector123/mangadex-clone",
-  },
-];
+import { projectList } from "@/constants/project.constant";
 
 export function Project() {
   return (

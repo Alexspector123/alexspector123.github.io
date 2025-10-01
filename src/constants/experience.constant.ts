@@ -1,6 +1,6 @@
-import { exp } from "@/interfaces/exp.interface";
+import { Exp } from "@/interfaces/exp.interface";
 
-export const experienceList: exp[] = [
+export const experienceList: Exp[] = [
   {
     name: "HTML/CSS",
     progress: 80,

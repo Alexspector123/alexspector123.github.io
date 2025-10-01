@@ -2,7 +2,16 @@
 
 import { FaBookOpen } from "react-icons/fa";
 
-const events = [
+interface IEvent {
+  date: string;
+  title: string;
+  subtitle: string;
+  major: string;
+  desc: string;
+  icon: React.ReactElement;
+}
+
+const events: IEvent[] = [
   {
     date: "2022 - present",
     title: "International University",

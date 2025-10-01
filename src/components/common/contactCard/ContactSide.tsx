@@ -25,7 +25,7 @@ export default function ContactSide() {
       }}
       exit={{ y: 30, opacity: 0 }}
       className="inline-flex gap-7 sm:gap-15 items-center flex-col sm:flex-row 
-                              border-4 rounded-2xl dark:border-white
+                              border-t-1 shadow-xl/20 rounded-2xl dark:border-t-white dark:shadow-xl/20 dark:shadow-white
                               py-5 px-6 sm:px-10"
     >
       <h3 className="text-xl sm:text-2xl font-medium text-gray-800 dark:text-white">

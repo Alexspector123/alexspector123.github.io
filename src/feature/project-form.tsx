@@ -74,7 +74,7 @@ export default function ProjectForm() {
               href="/experience"
               className="absolute right-0
                                 flex items-center 
-                                text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
+                                text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
                                 hover:-right-3
                                 cursor-pointer 
                                 !rounded-button

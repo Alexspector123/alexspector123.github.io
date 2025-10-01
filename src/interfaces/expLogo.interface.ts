@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 
-export interface expLogo {
+export interface ExpLogo {
   name: string;
   icon: IconType;
 }

@@ -3,14 +3,14 @@ import React from "react";
 import Image from "next/image";
 import { IoLogoGithub } from "react-icons/io";
 
-interface ProjectCardProps {
+interface IProjectCardProps {
   title: string;
   desc: string;
   imageUrl: string;
   link: string;
 }
 
-export const ProjectCard = (props: ProjectCardProps) => {
+export const ProjectCard = (props: IProjectCardProps) => {
   const { title, desc, imageUrl, link } = props;
 
   return (
@@ -20,7 +20,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                 flex flex-col items-start justify-center 
                 rounded-md border-2 border-gray-800 
                 transition-all duration-300 
-                hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[6px_6px_0px_0px_rgba(50,50,50,1)]"
+                hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[6px_6px_0px_0px_rgba(50,50,50,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.81)]"
     >
       <div className="flex flex-col">
         <div className="relative w-full h-[200px]">
@@ -45,9 +45,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
                             mt-12 
                             w-24 h-10 
                             rounded-md border-2 border-gray-800 
-                            bg-white 
-                            shadow-[4px_4px_0px_0px_rgba(50,50,50,1)] 
-                            text-[17px] font-semibold text-gray-800 cursor-pointer 
+                            bg-white
+                            text-[17px] font-semibold text-gray-800 cursor-pointer
+                            transition-all duration-300
+                            `hover:-translate-y-1.5 hover:-translate-x-1.5 hover:shadow-[4px_4px_0px_0px_rgba(50,50,50,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.81)]
                             active:shadow-none active:translate-x-[3px] active:translate-y-[3px]"
             >
               <IoLogoGithub size={24} /> Code

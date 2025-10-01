@@ -1,23 +1,23 @@
+import { motion } from "motion/react";
+import React from "react";
 
-
-import { motion } from 'motion/react';
-import React from 'react'
-
-interface ProgressBarProps {
-    name: string;
-    progress: number;
+interface IProgressBarProps {
+  name: string;
+  progress: number;
 }
 
-export const ProgressBar = (props: ProgressBarProps) => {
-    const { name, progress } = props;
+export const ProgressBar = (props: IProgressBarProps) => {
+  const { name, progress } = props;
 
-    return (
-        <div>
-            <div className='mb-1 text-base dark:text-white'>{name}</div>
-            <div className='w-30 lg:w-40 h-5
+  return (
+    <div>
+      <div className="mb-1 text-base dark:text-white">{name}</div>
+      <div
+        className="w-30 lg:w-40 h-5
                             mb-3 dark:text-white
                             rounded-full
-                            border-2'>
+                            border-2"
+      >
         <motion.div
           className="h-full rounded-full bg-black dark:bg-white"
           initial={{ width: 0 }}
@@ -25,11 +25,10 @@ export const ProgressBar = (props: ProgressBarProps) => {
           transition={{
             duration: 1,
             ease: [0.33, 1, 0.68, 1],
-            type: 'tween',
+            type: "tween",
           }}
         />
-
-            </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};

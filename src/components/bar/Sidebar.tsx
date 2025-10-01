@@ -119,7 +119,7 @@ export const Sidebar = () => {
             : { width: expanded ? 300 : 40 }
         }
         transition={{ duration: 0.3 }}
-        className={`p-2 rounded-xl bg-black/70 dark:bg-gray-300 transition
+        className={`p-2 rounded-xl bg-black/70 dark:bg-gray-300/70 transition
                             flex justify-center items-center
           ${isMobile ? "w-10" : "h-10"}
         `}

@@ -60,7 +60,7 @@ export function Information() {
         <a
           href="/projects"
           className="mt-6 inline-block transition
-                     text-sm font-mono text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
+                     text-sm font-mono text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
                      transform hover:translate-x-2
                      duration-300"
         >

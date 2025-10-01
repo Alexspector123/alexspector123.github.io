@@ -3,30 +3,10 @@
 import React from "react";
 
 import { ProjectCard } from "@/components/common/project/ProjectCard";
+import { projectList } from "@/constants/project.constant";
 
 import PageTransition from "@/components/page/PageTransition";
 import { motion } from "framer-motion";
-
-interface Project {
-  title: string;
-  date: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  type: string;
-}
-
-const projectList: Project[] = [
-  {
-    title: "Mangadex Clone",
-    date: "Feb 2025 - Present",
-    description:
-      "My personal project to clone Mangadex, a popular manga reading platform.",
-    imageUrl: "/mangadex.webp",
-    link: "Alexspector123/mangadex-clone",
-    type: "Personal Project",
-  },
-];
 
 export default function ProjectsPage() {
   return (
@@ -97,7 +77,7 @@ export default function ProjectsPage() {
                 href="/experience"
                 className="absolute right-0
                                 flex items-center 
-                                text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
+                                text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
                                 hover:-right-3
                                 cursor-pointer 
                                 !rounded-button

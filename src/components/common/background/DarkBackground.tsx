@@ -7,7 +7,7 @@ export default function DarkBackground({
     <div className="min-h-screen w-full bg-[#0a0a0a] relative">
       {/* Cosmic Aurora */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: `
         radial-gradient(ellipse at 20% 30%, rgba(56, 189, 248, 0.4) 0%, transparent 60%),

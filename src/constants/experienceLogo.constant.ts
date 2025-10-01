@@ -1,4 +1,4 @@
-import { expLogo } from "@/interfaces/expLogo.interface";
+import { ExpLogo } from "@/interfaces/expLogo.interface";
 
 import {
   SiExpress,
@@ -28,7 +28,7 @@ import {
 import { FaJava } from "react-icons/fa";
 import { PiFileSql } from "react-icons/pi";
 
-export const experienceLogoList: expLogo[] = [
+export const experienceLogoList: ExpLogo[] = [
   {
     name: "HTML5",
     icon: SiHtml5,
