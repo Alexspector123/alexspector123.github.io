@@ -31,7 +31,9 @@ export function Timeline() {
         <div className="flex flex-col gap-10">
           {events.map((event, idx) => (
             <div key={idx} className="flex items-start gap-10">
-              <div className="w-40 text-right font-semibold">{event.date}</div>
+              <div className="w-19 sm:w-40 text-right font-semibold ">
+                {event.date}
+              </div>
               <div className="relative">
                 <div
                   className={`w-6 h-6 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black`}
