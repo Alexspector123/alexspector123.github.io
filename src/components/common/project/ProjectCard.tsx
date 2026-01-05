@@ -39,7 +39,7 @@ export const ProjectCard = (props: IProjectCardProps) => {
         <p className="text-gray-700 dark:text-gray-300">{description}</p>
         <div className="mt-4">
           <a
-            href={`https://github.com/${link}`}
+            href={`${link}`}
             target="_blank"
             className="text-sm text-gray-600 transition dark:text-gray-300 
                                         flex items-center 

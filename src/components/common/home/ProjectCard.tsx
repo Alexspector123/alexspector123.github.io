@@ -39,7 +39,7 @@ export const ProjectCard = (props: IProjectCardProps) => {
           </div>
           <div className="flex justify-end">
             <a
-              href={`https://github.com/${link}`}
+              href={`${link}`}
               target="_blank"
               className="flex gap-1 justify-center items-center 
                             mt-12 

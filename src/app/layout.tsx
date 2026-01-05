@@ -8,6 +8,8 @@ import { Navbar } from "@/components/bar/Navbar";
 import { Footer } from "@/components/footer/Footer";
 import Background from "@/components/common/background/Background";
 
+import ClickLayout from "@/layouts/ClickLayout";
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
@@ -17,6 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Hitori Portfolio",
   description: "An innovative software developer",
+  icons: {
+    icon: "/cat-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +41,9 @@ export default function RootLayout({
               {/* Navbar */}
               <Navbar />
               {/* Main content */}
-              <main>{children}</main>
+              <main>
+                <ClickLayout>{children}</ClickLayout>
+              </main>
               <div>
                 <Footer />
               </div>
