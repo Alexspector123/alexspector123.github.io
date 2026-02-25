@@ -4,7 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "next-themes";
 
-import { Navbar } from "@/components/bar/Navbar";
+import { Navbar } from "@/components/common/bar/Navbar";
 import { Footer } from "@/components/footer/Footer";
 import Background from "@/components/common/background/Background";
 
