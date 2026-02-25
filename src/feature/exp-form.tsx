@@ -2,10 +2,9 @@
 
 import React from "react";
 
-import { ProgressBar } from "@/components/common/skill/ProgressBar";
-import { experienceList } from "@/constants/experience.constant";
-
 import { motion } from "framer-motion";
+import { SkillButton } from "@/components/common/skill/SkillButton";
+import { experienceLogoList } from "@/constants/experienceLogo.constant";
 
 export function ExperienceForm() {
   return (
@@ -60,15 +59,14 @@ export function ExperienceForm() {
             >
               Language
             </h2>
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] lg:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] 2xl:xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
-              {experienceList
+            <div
+              className="grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))]
+                          gap-4 lg:gap-6 2xl:gap-8"
+            >
+              {experienceLogoList
                 .filter((exp) => exp.type === "language")
                 .map((exp, index) => (
-                  <ProgressBar
-                    key={index}
-                    name={exp.name}
-                    progress={exp.progress}
-                  />
+                  <SkillButton key={index} name={exp.name} icon={exp.icon} />
                 ))}
             </div>
           </div>
@@ -83,17 +81,16 @@ export function ExperienceForm() {
             >
               Tools & Framework
             </h2>
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] lg:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] 2xl:xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
-              {experienceList
+            <div
+              className="grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))]
+                         gap-4 lg:gap-6 2xl:gap-8"
+            >
+              {experienceLogoList
                 .filter(
-                  (exp) => exp.type === "framework" || exp.type === "tool"
+                  (exp) => exp.type === "framework" || exp.type === "tool",
                 )
                 .map((exp, index) => (
-                  <ProgressBar
-                    key={index}
-                    name={exp.name}
-                    progress={exp.progress}
-                  />
+                  <SkillButton key={index} name={exp.name} icon={exp.icon} />
                 ))}
             </div>
           </div>

@@ -38,9 +38,7 @@ export default function RootLayout({
               className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
                       `}
             >
-              {/* Navbar */}
               <Navbar />
-              {/* Main content */}
               <main>
                 <ClickLayout>{children}</ClickLayout>
               </main>
