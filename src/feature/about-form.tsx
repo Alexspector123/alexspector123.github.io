@@ -51,7 +51,7 @@ export function AboutForm() {
                     src="avt.jpg"
                     alt=""
                     className="absolute xl:top-0 xl:right-0 
-                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-73 md:max-h-73
+                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-73 xl:max-h-73
                             object-cover rounded-md"
                   />
                   <motion.img
@@ -66,7 +66,7 @@ export function AboutForm() {
                     src="avt2.jpg"
                     alt=""
                     className="hidden sm:block absolute bottom-0 left-0 
-                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-73 md:max-h-73
+                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-73 xl:max-h-73
                               object-cover rounded-md"
                   />
                 </div>
