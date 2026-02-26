@@ -118,20 +118,18 @@ export function ExperienceForm() {
                             md:my-5
                             flex justify-end"
         >
-          <div className="">
-            <a
-              href="/about"
-              className="transform transition-transform
+          <a
+            href="/about"
+            className="transform transition-transform
                         flex items-center
                       text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
                         hover:translate-x-3
                         cursor-pointer
                         !rounded-button
                         duration-300"
-            >
-              Next &rarr;
-            </a>
-          </div>
+          >
+            Next &rarr;
+          </a>
         </div>
       </div>
     </div>

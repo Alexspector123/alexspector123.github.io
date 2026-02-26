@@ -74,14 +74,14 @@ export default function ProjectsPage() {
                             flex justify-end h-8"
             >
               <a
-                href="/experience"
-                className="absolute right-0
-                                flex items-center 
-                                text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
-                                hover:-right-3
-                                cursor-pointer 
-                                !rounded-button
-                                duration-300"
+                href="/about"
+                className="transform transition-transform
+                        flex items-center
+                      text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white
+                        hover:translate-x-3
+                        cursor-pointer
+                        !rounded-button
+                        duration-300"
               >
                 Next &rarr;
               </a>

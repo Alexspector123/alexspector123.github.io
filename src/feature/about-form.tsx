@@ -275,20 +275,17 @@ export function AboutForm() {
             <ContactCard />
           </div>
         </div>
-        <div
-          className="relative
-                            mt-5
-                            flex justify-end"
-        >
+        <div className="relative mt-5">
           <Link
             href="/"
-            className="absolute left-0
+            className="transform transition-transform
                                 flex items-center 
                                 text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
-                                hover:-left-3
+                                hover:-translate-x-3
                                 cursor-pointer 
                                 !rounded-button
-                                duration-300"
+                                duration-300
+                                w-fit"
           >
             &larr; Go back Home
           </Link>

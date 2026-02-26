@@ -8,19 +8,16 @@ export const Footer = () => {
   return (
     <footer className="bg-white dark:bg-black ">
       <div
-        className="w-full mx-auto max-w-screen-xl
-                            px-10 pb-5 md:px-20
-                            md:pt-15
+        className="w-full mx-auto 
+                            px-10 pt-5 pb-5 md:px-20
+                            md:pt-12
                             flex flex-col items-center gap-1 sm:gap-4 md:flex-row md:items-center md:justify-between"
       >
         <span
           className="text-sm text-gray-500 sm:text-center dark:text-gray-400
                                 "
         >
-          Copyright &copy; 2025&nbsp;
-          <a href="https://flowbite.com/" className="hover:underline">
-            Hitori
-          </a>
+          Copyright &copy; 2025&nbsp;Hitori
         </span>
         <div className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <a href="https://linkedin.com/in/huythanhphan" target="_blank">

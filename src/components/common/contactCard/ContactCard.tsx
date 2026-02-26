@@ -22,7 +22,7 @@ export const ContactCard = () => {
       </div>
       <div
         className="flex justify-center items-center
-                            sm:mt-5 mt-15
+                            mt-5 sm:mt-15
                             "
       >
         <p className="inline-block dark:text-white ">
