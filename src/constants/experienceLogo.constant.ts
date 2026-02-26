@@ -143,12 +143,11 @@ export const experienceLogoList: ExpLogo[] = [
     icon: SiMongodb,
     type: "tool",
   },
-
-  {
-    name: "GraphQl",
-    icon: SiGraphql,
-    type: "tool",
-  },
+  // {
+  //   name: "GraphQl",
+  //   icon: SiGraphql,
+  //   type: "tool",
+  // },
   // {
   //   name: "GraphQl",
   //   icon: SiApollographql,

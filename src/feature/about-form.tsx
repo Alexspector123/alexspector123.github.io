@@ -14,10 +14,7 @@ export function AboutForm() {
       className="p-10 pb-20 md:p-20 md:pb-0
                     font-mono"
     >
-      <div
-        className="max-w-[1440px]
-                      pt-18 sm:p-8"
-      >
+      <div className="pt-18 sm:p-8">
         <div>
           <h2
             className="text-2xl font-medium text-gray-800 dark:text-white
