@@ -4,4 +4,5 @@ export interface ExpLogo {
   name: string;
   icon: IconType;
   type: string;
+  color?: string;
 }

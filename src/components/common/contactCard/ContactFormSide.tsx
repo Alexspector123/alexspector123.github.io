@@ -10,7 +10,7 @@ export default function ContactForm() {
     message: "",
   });
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setMsgForm((prev) => ({
@@ -56,7 +56,7 @@ export default function ContactForm() {
             required
             value={msgForm.name}
             onChange={handleChange}
-            className="text-base border-2 border-black dark:border-white rounded-md w-full py-1"
+            className="text-base border-2 border-black dark:border-white rounded-md w-full p-1"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ export default function ContactForm() {
             required
             value={msgForm.email}
             onChange={handleChange}
-            className="text-base border-2 border-black dark:border-white rounded-md w-full py-1"
+            className="text-base border-2 border-black dark:border-white rounded-md w-full p-1"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -81,7 +81,7 @@ export default function ContactForm() {
             id="message"
             value={msgForm.message}
             onChange={handleChange}
-            className="border-2 border-black dark:border-white rounded-md w-full h-30"
+            className="border-2 border-black dark:border-white rounded-md w-full h-30 p-1"
           ></textarea>
         </div>
         <button

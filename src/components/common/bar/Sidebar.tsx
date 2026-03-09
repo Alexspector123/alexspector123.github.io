@@ -30,25 +30,25 @@ const navItems: NavItem[] = [
     name: "HomePage",
     route: "/",
     icon: <HiOutlineHome className="w-6 h-6 md:w-8 md:h-8" />,
-    activeIcon: <HiHome className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiHome className="w-5 h-5 md:w-8 md:h-8" />,
   },
   {
     name: "Projects",
     route: "/projects",
     icon: <HiOutlineFolderOpen className="w-6 h-6 md:w-8 md:h-8" />,
-    activeIcon: <HiFolderOpen className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiFolderOpen className="w-5 h-5 md:w-8 md:h-8" />,
   },
   {
     name: "Experience",
     route: "/experience",
     icon: <HiOutlineBriefcase className="w-6 h-6 md:w-8 md:h-8" />,
-    activeIcon: <HiBriefcase className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiBriefcase className="w-5 h-5 md:w-8 md:h-8" />,
   },
   {
     name: "Personal",
     route: "/about",
     icon: <HiOutlineUser className="w-6 h-6 md:w-8 md:h-8" />,
-    activeIcon: <HiUser className="w-6 h-6 md:w-8 md:h-8" />,
+    activeIcon: <HiUser className="w-5 h-5 md:w-8 md:h-8" />,
   },
 ];
 
@@ -103,39 +103,25 @@ export const Sidebar = () => {
   }, [isMobile, expanded]);
 
   return (
-    <div>
+    <div className="md:flex-row flex flex-col gap-2 items-center">
       <motion.div
         ref={barRef}
         onClick={handleClick}
-        onMouseEnter={() => {
-          if (!isMobile) setExpanded(true);
-        }}
-        onMouseLeave={() => {
-          if (!isMobile) setExpanded(false);
-        }}
-        animate={
-          isMobile
-            ? { height: expanded ? 230 : 40 }
-            : { width: expanded ? 300 : 40 }
-        }
+        animate={isMobile && { height: expanded ? 230 : 40 }}
         transition={{ duration: 0.3 }}
-        className={`p-2 rounded-xl bg-black/70 dark:bg-gray-300/70 transition
+        className={`py-4 rounded-3xl bg-black/70 dark:bg-gray-300/70 transition
                             flex justify-center items-center
-          ${isMobile ? "w-10" : "h-10"}
+          ${isMobile ? "w-10" : "h-14"}
         `}
       >
-        {!expanded ? (
-          <FaBars className="w-5 h-5 text-white dark:text-black" />
+        {isMobile && !expanded ? (
+          <FaBars className="w-7 h-7 text-white dark:text-black" />
         ) : (
           <div
-            className={`flex items-center justify-between
+            className={`flex w-full p-2 items-center justify-between gap-2
                                     ${
                                       expanded
-                                        ? `${
-                                            isMobile
-                                              ? "flex-col h-full"
-                                              : "flex-row w-full p-2"
-                                          }`
+                                        ? `${isMobile && "flex-col h-full p-0.5"}`
                                         : ""
                                     }
                                     
@@ -148,21 +134,43 @@ export const Sidebar = () => {
                     if (isMobile) setExpanded(false);
                     setActiveItem(name);
                   }}
-                  className={`relative group cursor-pointer p-2 rounded-md transition
+                  className={`relative group cursor-pointer ${activeItem !== name && "p-2"} rounded-3xl transition
                             bg-transparent hover:bg-gray-200  dark:hover:bg-black
                             text-white hover:text-black dark:text-black dark:hover:text-white`}
                 >
-                  {activeItem === name ? activeIcon : icon}
-                  <span className="absolute -bottom-4.5 left-0 text-sm hidden group-hover:block dark:text-white">
-                    {name}
-                  </span>
+                  {activeItem === name && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-gray-200 dark:bg-black rounded-3xl"
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.6,
+                      }}
+                    />
+                  )}
+                  {activeItem === name ? (
+                    <div className="flex items-center gap-2 p-2 rounded-3xl z-10 relative text-black dark:text-white">
+                      {activeIcon}
+                      <span className="text-sm">{name}</span>
+                    </div>
+                  ) : (
+                    <>
+                      {icon}
+                      <span className="absolute -bottom-6 left-0 text-sm hidden md:group-hover:block dark:text-white">
+                        {name}
+                      </span>
+                    </>
+                  )}
                 </div>
               </Link>
             ))}
-            <ThemeButton />
           </div>
         )}
       </motion.div>
+      <div className="w-fit rounded-3xl bg-black/70 dark:bg-gray-300/70">
+        <ThemeButton />
+      </div>
     </div>
   );
 };

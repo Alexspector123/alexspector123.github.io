@@ -4,7 +4,6 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { experienceLogoList } from "@/constants/experienceLogo.constant";
-import MagicBento from "@/components/ui/MagicBento";
 
 export function ExperienceForm() {
   return (
@@ -14,7 +13,7 @@ export function ExperienceForm() {
                     font-mono
                     "
       >
-        <div className="pt-18 xl:p-8">
+        <div className="xl:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-15">
             {/* Education */}
             <div className="flex flex-col lg:min-h-40">
@@ -57,26 +56,33 @@ export function ExperienceForm() {
               >
                 Language
               </h2>
-
-              <MagicBento
-                textAutoHide={true}
-                enableStars
-                enableSpotlight
-                enableBorderGlow={true}
-                enableTilt={false}
-                enableMagnetism={false}
-                clickEffect
-                spotlightRadius={400}
-                particleCount={12}
-                glowColor="132, 0, 255"
-                disableAnimations={false}
-              >
+              <div className="grid gap-7 p-3 max-w-[54rem] w-fit select-none relative m-0 grid-cols-3 min-[600px]:grid-cols-4 min-[896px]:grid-cols-7 lg:grid-cols-4">
                 {experienceLogoList
                   .filter((exp) => exp.type === "language")
                   .map((exp, index) => (
-                    <exp.icon key={index} className="text-4xl text-slate-400" />
+                    <div
+                      key={index}
+                      className="
+                        experience-card
+                        w-fit flex justify-center items-center relative
+                        p-5 rounded-[20px] border border-solid overflow-hidden
+                        transition-all duration-300 ease-in-out
+                        hover:-translate-y-0.5
+                        hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+                      "
+                      style={
+                        {
+                          "--hover-color": exp.color,
+                          backgroundColor: "var(--background-dark)",
+                          borderColor: "var(--border-color)",
+                          color: "var(--white)",
+                        } as React.CSSProperties
+                      }
+                    >
+                      <exp.icon className="text-4xl transition-colors duration-500" />
+                    </div>
                   ))}
-              </MagicBento>
+              </div>
             </div>
             {/* Tools & Framework */}
             <div className="lg:min-h-40">
@@ -89,27 +95,35 @@ export function ExperienceForm() {
               >
                 Tools & Framework
               </h2>
-              <MagicBento
-                textAutoHide={true}
-                enableStars
-                enableSpotlight
-                enableBorderGlow={true}
-                enableTilt={false}
-                enableMagnetism={false}
-                clickEffect
-                spotlightRadius={400}
-                particleCount={12}
-                glowColor="132, 0, 255"
-                disableAnimations={false}
-              >
+              <div className="grid gap-7 p-3 max-w-[54rem] w-fit select-none relative m-0 grid-cols-3 min-[600px]:grid-cols-4 min-[896px]:grid-cols-7 lg:grid-cols-4">
                 {experienceLogoList
                   .filter(
                     (exp) => exp.type === "framework" || exp.type === "tool",
                   )
                   .map((exp, index) => (
-                    <exp.icon key={index} className="text-4xl text-slate-400" />
+                    <div
+                      key={index}
+                      className="
+                        experience-card
+                        w-fit flex justify-center items-center relative
+                        p-5 rounded-[20px] border border-solid overflow-hidden
+                        transition-all duration-300 ease-in-out
+                        hover:-translate-y-0.5
+                        hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+                      "
+                      style={
+                        {
+                          "--hover-color": exp.color,
+                          backgroundColor: "var(--background-dark)",
+                          borderColor: "var(--border-color)",
+                          color: "var(--white)",
+                        } as React.CSSProperties
+                      }
+                    >
+                      <exp.icon className="text-4xl transition-colors duration-500" />
+                    </div>
                   ))}
-              </MagicBento>
+              </div>
             </div>
           </div>
         </div>

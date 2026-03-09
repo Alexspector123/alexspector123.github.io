@@ -14,7 +14,7 @@ export function AboutForm() {
       className="p-10 pb-20 md:p-20 md:pb-0
                     font-mono"
     >
-      <div className="pt-18 sm:p-8">
+      <div className="sm:p-8">
         <div>
           <h2
             className="text-2xl font-medium text-gray-800 dark:text-white
@@ -51,7 +51,7 @@ export function AboutForm() {
                     src="avt.jpg"
                     alt=""
                     className="absolute xl:top-0 xl:right-0 
-                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-73 xl:max-h-73
+                           max-w-35 max-h-35 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-73 xl:max-h-73
                             object-cover rounded-md"
                   />
                   <motion.img
@@ -115,6 +115,7 @@ export function AboutForm() {
               >
                 My Interest
               </h3>
+              {/* Desktop */}
               <div
                 className="hidden lg:block float-right
                             ml-4
@@ -126,21 +127,23 @@ export function AboutForm() {
                               h-160 sm:h-175 md:h-120 xl:h-135
                               "
                 >
-                  <motion.img
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{
-                      duration: 2,
-                      delay: 0.3,
-                      ease: [0.33, 1, 0.68, 1],
-                      type: "tween",
-                    }}
-                    src="code.jpeg"
-                    alt=""
-                    className="absolute top-55 md:top-5 right-0
+                  <div className="relative m-2">
+                    <motion.img
+                      initial={{ y: 30, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.3,
+                        ease: [0.33, 1, 0.68, 1],
+                        type: "tween",
+                      }}
+                      src="code.jpeg"
+                      alt=""
+                      className="absolute top-55 md:top-5 right-0
                            max-w-45 max-h-45 sm:max-w-70 sm:max-h-70 xl:max-w-75 xl:max-h-75
                             object-cover rounded-md"
-                  />
+                    />
+                  </div>
                   <motion.img
                     initial={{ y: 30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -173,15 +176,17 @@ export function AboutForm() {
                   />
                 </div>
               </div>
+              {/* Mobile */}
               <div className="text-base text-gray-700 dark:text-gray-300">
                 <div
                   className="lg:hidden float-right
+                  ml-2 mb-2
                             sm:ml-4
                             max-h-250"
                 >
                   <div
                     className="relative 
-                                    w-40 h-50 
+                                    w-30 h-40
                                     sm:w-60 sm:h-60 
                                     md:w-65 md:h-65 
                                     xl:w-75 xl:h-75
@@ -210,14 +215,14 @@ export function AboutForm() {
                 <br />
                 <div
                   className="lg:hidden float-right
-                            ml-2
+                            ml-2 mb-2
                             max-h-250
                             flex flex-col
                             items-end"
                 >
                   <div
                     className="relative 
-                                    w-46 h-50 
+                                    w-30 h-45 
                                     sm:w-60 sm:h-60 
                                     md:w-65 md:h-65 
                                     xl:w-75 xl:h-75
@@ -248,7 +253,8 @@ export function AboutForm() {
                 >
                   <div
                     className="relative 
-                                      w-50 h-50 
+                                      w-40 h-30
+                                      mb-1 
                                       sm:w-70 sm:h-70 
                                       md:w-65 md:h-65 
                                       xl:w-75 xl:h-75

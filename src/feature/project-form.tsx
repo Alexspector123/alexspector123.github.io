@@ -20,7 +20,6 @@ export default function ProjectForm() {
       >
         <main
           className="flex-grow 
-                          pt-18
                           sm:p-8"
         >
           <div

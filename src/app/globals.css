@@ -25,3 +25,8 @@ body {
     --foreground: #ededed;
   }
 }
+
+.experience-card:hover {
+  color: var(--hover-color) !important;
+  border-color: var(--hover-color) !important;
+}
