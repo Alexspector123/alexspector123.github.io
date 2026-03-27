@@ -281,7 +281,7 @@ export function AboutForm() {
             <ContactCard />
           </div>
         </div>
-        <div className="relative mt-5">
+        <div className="relative mt-10 md:mt-5">
           <Link
             href="/"
             className="transform transition-transform

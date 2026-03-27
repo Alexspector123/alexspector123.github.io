@@ -24,7 +24,7 @@ const events: IEvent[] = [
 
 export function Timeline() {
   return (
-    <div className="h-screen">
+    <div className="md:h-screen">
       <div className="relative w-full max-w-4xl mx-auto py-10 mb-20 h-fit">
         <div className="absolute left-31.5 sm:left-52.5 top-0 bottom-0 w-1 bg-gray-300"></div>
 
@@ -36,7 +36,7 @@ export function Timeline() {
               </div>
               <div className="relative">
                 <div
-                  className={`w-6 h-6 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black`}
+                  className={`w-6 h-6 absolute rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black`}
                 >
                   {event.icon}
                 </div>

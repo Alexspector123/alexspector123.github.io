@@ -33,7 +33,7 @@ export const Footer = () => {
             />
           </a>
           <a
-            href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
+            href="https://drive.google.com/file/d/13_IaKtgAcEEPZFfnIFTw2S3evGFPYRRW/view?usp=drive_link"
             target="_blank"
           >
             <PiReadCvLogoFill

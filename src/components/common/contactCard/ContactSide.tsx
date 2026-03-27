@@ -62,14 +62,21 @@ export default function ContactSide() {
             <a href="https://github.com/Alexspector123" target="_blank">
               <RiGithubFill className="w-7 h-7 sm:h-8 sm:w-8" />
             </a>
+            <a
+              href="https://drive.google.com/file/d/13_IaKtgAcEEPZFfnIFTw2S3evGFPYRRW/view?usp=drive_link"
+              target="_blank"
+              className="md:hidden"
+            >
+              <PiReadCvLogoFill className="h-8 w-8" />
+            </a>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="items-center hidden md:flex">
           <FaFileLines className="h-5 w-5" />
           <div className="ml-4 flex items-center">
             <h4 className="text-[18px]">My Resume </h4>
             <a
-              href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
+              href="https://drive.google.com/file/d/13_IaKtgAcEEPZFfnIFTw2S3evGFPYRRW/view?usp=drive_link"
               target="_blank"
             >
               <PiReadCvLogoFill className="h-8 w-8" />

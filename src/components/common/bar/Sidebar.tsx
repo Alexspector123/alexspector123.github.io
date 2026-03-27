@@ -109,7 +109,7 @@ export const Sidebar = () => {
         onClick={handleClick}
         animate={isMobile && { height: expanded ? 230 : 40 }}
         transition={{ duration: 0.3 }}
-        className={`py-4 rounded-3xl bg-black/70 dark:bg-gray-300/70 transition
+        className={`md:py-4 rounded-3xl bg-black/70 dark:bg-gray-300/70 transition
                             flex justify-center items-center
           ${isMobile ? "w-10" : "h-14"}
         `}
@@ -152,14 +152,16 @@ export const Sidebar = () => {
                   {activeItem === name ? (
                     <div className="flex items-center gap-2 p-2 rounded-3xl z-10 relative text-black dark:text-white">
                       {activeIcon}
-                      <span className="text-sm">{name}</span>
+                      {!isMobile && <span className="text-sm">{name}</span>}
                     </div>
                   ) : (
                     <>
                       {icon}
-                      <span className="absolute -bottom-6 left-0 text-sm hidden md:group-hover:block dark:text-white">
-                        {name}
-                      </span>
+                      {!isMobile && (
+                        <span className="absolute -bottom-6 left-0 text-sm hidden md:group-hover:block dark:text-white">
+                          {name}
+                        </span>
+                      )}
                     </>
                   )}
                 </div>

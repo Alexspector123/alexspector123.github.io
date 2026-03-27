@@ -14,7 +14,7 @@ export const ContactCard = () => {
   };
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full p-4 flex flex-col justify-center">
       <div className="flex justify-center dark:text-white">
         <AnimatePresence mode="wait">
           {state ? <ContactSide /> : <ContactForm />}
